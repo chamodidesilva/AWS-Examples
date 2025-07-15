@@ -1,5 +1,7 @@
 https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-simpletable.html#sam-resource-simpletable--examples
 
+# For simple table creation with SAM
+
 ## Build template
 
 ```sh
@@ -26,4 +28,13 @@ aws dynamodb put-item \
 --item file://item.json \
 --return-consumed-capacity TOTAL \
 --return-item-collection-metrics SIZE
+```
+
+# For provisioned table creation with CFN
+
+```sh
+aws cloudformation deploy \
+--template-file template.yaml \
+--region ap-south-1 \
+--stack-name my-ddb-table
 ```

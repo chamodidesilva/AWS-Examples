@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: "2010-09-09" 
+Resources: 
+  myDynamoDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: MyDynamoDBTable
+      TableClass: STANDARD
+      BillingMode: PROVISIONED
+      AttributeDefinitions:
+        - AttributeName: pk
+          AttributeType: S
+        - AttributeName: sk
+          AttributeType: S     
+      KeySchema:
+        - AttributeName: pk
+          KeyType: HASH
+        - AttributeName: sk
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+      
+
+## Notes
+# The attribute definitions is only used to define the primary key attributes.
+# If you want to add more attributes, you can do so in the item itself.
+# provisioned trhoughput is needed when the billing mode is PROVISIONED.
+
