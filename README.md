@@ -11,12 +11,12 @@ Each service has its own dedicated folder containing reference commands, explana
 ## Covered Services
 
 <div align="left">
-  <img height="40" alt="image" src="https://github.com/user-attachments/assets/68499ba5-3449-4a76-b9f3-65a0c5abb455" />&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Storage/SimpleStorageService.png" height="40" alt="S3" />&nbsp;&nbsp;&nbsp;
   <img src="https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/NetworkingContentDelivery/VirtualPrivateCloud.png" height="40" alt="VPC" />&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/ApplicationIntegration/SimpleQueueService.png" height="40" alt="SQS" />&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/DynamoDB.png" height="40" alt="DynamoDB" />&nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/icacho-dev/aws-architecture-icons/main/Architecture-Service-Icons_02072025/Arch_Compute/48/Arch_Amazon-EC2_48.svg" height="40" alt="EC2" />&nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Storage/SimpleStorageService.png" height="40" alt="S3" />&nbsp;&nbsp;&nbsp;
+  <img height="40" alt="image" src="https://github.com/user-attachments/assets/68499ba5-3449-4a76-b9f3-65a0c5abb455" />&nbsp;&nbsp;&nbsp;
   <img src="https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Compute/Lambda.png" height="40" alt="Lambda" />&nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/DynamoDB.png" height="40" alt="DynamoDB" />&nbsp;&nbsp;&nbsp;
   <img src="https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist/Database/ElastiCache.png" height="40" alt="ElastiCache" />
 </div>
 <br>
@@ -24,6 +24,10 @@ Each service has its own dedicated folder containing reference commands, explana
 * **VPC**
   
 Covered basic operations via AWS CLI like creating, deleting, updating VPC components like subnets, route tables, NACLs and internet gateways. Used CloudFormation templates to set up a VPC with basic operations. 
+
+* **EC2**
+
+Setup EC2 instances via CLoudFormation for testing VPC behaviour on a resource and for connecting to the Redis cache. Provisioned the instances with an IAM role and inserted user data at the creation to run an Apache server.
 
 * **S3**
 
